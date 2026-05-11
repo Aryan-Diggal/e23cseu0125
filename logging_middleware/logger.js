@@ -10,15 +10,9 @@ const VALID_PACKAGES = [
 ];
 
 async function Log(stack, level, pkg, message) {
-  if (!VALID_STACKS.includes(stack)) {
-    throw new Error(`Invalid stack: ${stack}`);
-  }
-  if (!VALID_LEVELS.includes(level)) {
-    throw new Error(`Invalid level: ${level}`);
-  }
-  if (!VALID_PACKAGES.includes(pkg)) {
-    throw new Error(`Invalid package: ${pkg}`);
-  }
+  if (!VALID_STACKS.includes(stack)) return;
+  if (!VALID_LEVELS.includes(level)) return;
+  if (!VALID_PACKAGES.includes(pkg)) return;
 
   try {
     const res = await axios.post(
@@ -34,8 +28,8 @@ async function Log(stack, level, pkg, message) {
     console.log(`[${level.toUpperCase()}] ${pkg} - ${message} | logID: ${res.data.logID}`);
     return res.data;
   } catch (err) {
+   
     console.error(`[LOG FAILED] ${err.message}`);
-    throw err;
   }
 }
 
