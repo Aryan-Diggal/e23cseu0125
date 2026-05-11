@@ -1,0 +1,23 @@
+{
+  "name": "e23cseu0125",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Aryan-Diggal/e23cseu0125#readme",
+  "bugs": {
+    "url": "https://github.com/Aryan-Diggal/e23cseu0125/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aryan-Diggal/e23cseu0125.git"
+  },
+  "license": "ISC",
+  "author": "e23cseu0125",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
